@@ -1,0 +1,12 @@
+node_modules
+bower_components
+
+/.settings
+/.classpath
+/.project
+
+/.idea
+*.iml
+*.log
+
+/ng2/dist
