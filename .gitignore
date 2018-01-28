@@ -9,4 +9,6 @@ bower_components
 *.iml
 *.log
 
+/ng1/data/db.json
+/ng2/build
 /ng2/dist
