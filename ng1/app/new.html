@@ -1,0 +1,22 @@
+<form>
+    <table class="form-table">
+        <tr>
+            <td>Eesnimi:</td>
+            <td>
+                <input id="name-input" ng-model="vm.newContact">
+            </td>
+        </tr>
+        <tr>
+            <td>Telefon:</td>
+            <td>
+                <input id="phone-input" ng-model="vm.newPhone">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <br>
+                <a id="save-link" href ng-click="vm.addContact()">Salvesta</a>
+            </td>
+        </tr>
+    </table>
+</form>

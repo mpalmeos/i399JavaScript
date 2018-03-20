@@ -1,0 +1,29 @@
+<input id="search-string" ng-model="vm.OrderBy">
+<br><br>
+
+<table class="list-table">
+    <thead>
+        <tr>
+            <th>Nimi</th>
+            <th>Telefon</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody ng-repeat="contact in vm.contacts">
+    <tr ng-class="{selected: contact.selected}">
+        <td>
+            <a href="#/edit/{{ contact._id }}">{{ contact.name }}</a>
+        </td>
+        <td>
+            {{ contact.phone }}
+        </td>
+        <td>
+            <a href ng-click="vm.deleteContact(contact._id)">Kustuta</a>
+        </td>
+        <td>
+            <input type="checkbox" ng-model="contact.selected">
+        </td>
+    </tr>
+    </tbody>
+</table>

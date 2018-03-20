@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="et" ng-app="app">
+<html lang="et" ng-app="app" class="ng-scope">
 <head>
     <meta charset="utf-8">
     <title>Ng1</title>
@@ -8,13 +8,33 @@
 
     <style type="text/css">
         .ng-cloak { display: none }
+        .selected { background-color: #999999 }
     </style>
 </head>
 <body>
 
-Hello!
+<ul id="menu">
+    <li>
+        <a id="menu-search" href="#/search">Pealeht</a>
+    </li>
+
+    <li>
+        <a id="menu-new" href="#/new">Lisa uus</a>
+    </li>
+</ul>
+<br>
+<br>
+<br>
+
+<div ng-view></div>
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+<script src="app/routes.js"></script>
+<script src="app/new.ctrl.js"></script>
+<script src="app/search.ctr.js"></script>
+<script src="app/modal.srv.js"></script>
+<script src="app/edit.ctrl.js"></script>
 
 </body>
 </html>
