@@ -12,13 +12,11 @@
 
         function addContact() {
             var newContact = {
-                name : vm.newContact,
-                phone : vm.newPhone
+                name : vm.contact.name,
+                phone : vm.contact.phone
             };
 
             $http.post('api/contacts', newContact);
-            vm.newContact = '';
-            vm.newPhone = '';
             back();
         }
 

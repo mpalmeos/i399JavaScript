@@ -14,8 +14,8 @@
             templateUrl : 'app/new.html',
             controller : 'NewCtrl',
             controllerAs : 'vm'
-        }).when('/edit', {
-            templateUrl : 'app/edit.html',
+        }).when('/edit/:id', {
+            templateUrl : 'app/new.html',
             controller : 'EditCtrl',
             controllerAs : 'vm'
         }).otherwise('/search');

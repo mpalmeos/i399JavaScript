@@ -5,8 +5,9 @@
 
     function Ctrl($http, $routeParams, $location) {
         var vm = this;
+        vm.addContact = addContact;
+        vm.back = back;
         vm.contact = {};
-        vm.changeContact = changeContact;
 
         getContact();
 
@@ -16,15 +17,13 @@
             });
         }
 
-        function changeContact() {
-            var newContact = {
-                name : vm.newContact,
-                phone : vm.newPhone
-            };
+        function addContact() {
+            /*var newContact = {
+                name : vm.contact.name,
+                phone : vm.contact.phone
+            };*/
 
-            $http.post('api/contacts', newContact);
-            vm.newContact = '';
-            vm.newPhone = '';
+            $http.put('api/contacts/' + $routeParams.id, vm.contact);
             back();
         }
 

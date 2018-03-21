@@ -13,13 +13,13 @@
     <tbody ng-repeat="contact in vm.contacts">
     <tr ng-class="{selected: contact.selected}">
         <td>
-            <a href="#/edit/{{ contact._id }}">{{ contact.name }}</a>
+            <a class="edit-link" href="#/edit/{{ contact._id }}">{{ contact.name }}</a>
         </td>
         <td>
             {{ contact.phone }}
         </td>
         <td>
-            <a href ng-click="vm.deleteContact(contact._id)">Kustuta</a>
+            <a class="delete-link" href ng-click="vm.deleteContact(contact._id)">Kustuta</a>
         </td>
         <td>
             <input type="checkbox" ng-model="contact.selected">
