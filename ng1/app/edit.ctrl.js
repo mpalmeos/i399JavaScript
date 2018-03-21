@@ -18,11 +18,6 @@
         }
 
         function addContact() {
-            /*var newContact = {
-                name : vm.contact.name,
-                phone : vm.contact.phone
-            };*/
-
             $http.put('api/contacts/' + $routeParams.id, vm.contact);
             back();
         }

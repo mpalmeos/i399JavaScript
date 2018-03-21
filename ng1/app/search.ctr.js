@@ -7,8 +7,6 @@
         var vm = this;
         vm.contacts = {};
         vm.deleteContact = deleteContact;
-        var asi = vm.OrderBy;
-        vm.nameCodeFilter = nameCodeFilter;
 
         refresh();
 
@@ -22,10 +20,6 @@
             modalService.confirm().then(function () {
                return $http.delete('api/contacts/' + id)
             }).then(refresh);
-        }
-
-        function nameCodeFilter(asi) {
-
         }
     }
 })();
