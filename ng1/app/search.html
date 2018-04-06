@@ -1,8 +1,5 @@
-<input id="search-string" ng-model="vm.searchString" type="text" autofocus>
+<input id="search-string" ng-model="searchString" type="text" autofocus>
 
-<br><br>
-
-<button type="button" ng-click="vm.deleteSelected()">Kustuta märgitud</button>
 <table class="list-table">
     <thead>
     <tr>
@@ -12,7 +9,7 @@
         <th></th>
     </tr>
     </thead>
-    <tbody ng-repeat="contact in vm.contacts | filter : vm.searchString | orderBy: 'contact.name'">
+    <tbody ng-repeat="contact in vm.contacts | filter : searchString | orderBy: 'contact.name'">
     <tr ng-class="{selected: contact.selected}">
         <td>
             <a class="edit-link" href="#/edit/{{ contact._id }}">{{ contact.name }}</a>

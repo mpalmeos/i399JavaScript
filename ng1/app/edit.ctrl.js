@@ -2,25 +2,23 @@
     'use strict';
 
     angular.module('app').controller('EditCtrl', Ctrl);
-    Ctrl.$inject = ['$http', '$routeParams', '$location'];
 
     function Ctrl($http, $location, $routeParams) {
         var vm = this;
         vm.contact = {};
         vm.addContact = addContact;
+        vm.back = back;
 
         getContact();
 
         function getContact(){
-            $http.get('/api/contacts' + $routeParams.id).then(function (result) {
-                vm.contact = result;
+            $http.get('/api/contacts/' + $routeParams.id).then(function (result) {
+                vm.contact = result.data;
             });
         }
 
         function addContact() {
-            $http.post('/api/contacts' + $routeParams.id).then(function (result) {
-                vm.contact = result.data;
-            });
+            $http.put('/api/contacts/' + $routeParams.id, vm.contact);
             back();
         }
 
