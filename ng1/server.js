@@ -104,7 +104,7 @@ function deleteMultipleContacts(req, resp) {
         resp.status(200).json("Deleted");
     }).catch(err => {
         console.log(err);
-        resp.status(400).json("Failed to delete some or all of the contacts" + err.toString());
+        resp.status(400).json("Failed to delete some of the contacts" + err.toString());
     })
 
 }
