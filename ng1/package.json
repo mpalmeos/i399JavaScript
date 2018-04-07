@@ -2,9 +2,11 @@
   "name": "ng1",
   "version": "1.0.0",
   "scripts": {
-    "start": "json-server ./data/db.json --id _id --static ./ --routes data/routes.json"
+    "start": "node server.js"
   },
   "devDependencies": {
-    "json-server": "^0.9.5"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25"
   }
 }
