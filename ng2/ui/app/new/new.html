@@ -1,0 +1,22 @@
+<form>
+    <table class="form-table">
+        <tr>
+            <td>Eesnimi:</td>
+            <td>
+                <input type="text" name="name" id="name-input" [(ngModel)]="name">
+            </td>
+        </tr>
+        <tr>
+            <td>Telefon:</td>
+            <td>
+                <input type="text" name="phone" id="phone-input" [(ngModel)]="phone">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <br>
+                <button id="save-link" (click)="addContact()">Salvesta</button>
+            </td>
+        </tr>
+    </table>
+</form>

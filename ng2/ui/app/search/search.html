@@ -1,0 +1,29 @@
+<input type="text" id="search-string" name="searchString" [ngModel]="searchString" (ngModelChange)="search($event)">
+<br><br>
+
+<button type="button" id="delete-all-link" (click)="deleteSelected()">Kustuta märgitud</button>
+<br><br>
+
+<table class="list-table">
+    <thead>
+    <tr>
+        <th>Nimi</th>
+        <th>Telefon</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor='let contactListItem of contactListItems' [class]="contactListItem.checked ? 'selected' : ''">
+        <td><a routerLink="/edit/{{ contactListItem.contact._id }}" class="edit-link">
+            {{ contactListItem.contact.name }}</a></td>
+        <td>{{ contactListItem.contact.phone }}</td>
+        <td>
+            <button type="button" class="delete-link"
+                    (click)="deleteContact(contactListItem.contact._id)">Kustuta
+            </button>
+        </td>
+        <td><input type="checkbox" [(ngModel)]="contactListItem.checked"/></td>
+    </tr>
+    </tbody>
+</table>

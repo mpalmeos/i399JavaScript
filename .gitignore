@@ -10,5 +10,5 @@ bower_components
 *.log
 
 /ng1/data/db.json
-/ng2/build
+/ng2/ui/build
 /ng2/dist

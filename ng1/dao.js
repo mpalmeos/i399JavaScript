@@ -16,7 +16,7 @@ class Dao {
 
     findById(id) {
         id = new ObjectID(id);
-        return this.db.collection(COLLECTION).findOne({_id:id});
+        return this.db.collection(COLLECTION).findById({_id:id});
     }
 
     update(id, data) {
