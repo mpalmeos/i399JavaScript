@@ -4,8 +4,8 @@
   "scripts": {
     "serve": "webpack-dev-server --port 3001 --content-base ui/",
     "build": "webpack -p",
-    "back-end": "node server/server.js",
-    "start": "node server/server.js"
+    "back-end": "nodemon server/server.js",
+    "start": "nodemon server/server.js"
   },
   "dependencies": {
     "@angular/common": "^4.0.2",
@@ -23,7 +23,8 @@
     "zone.js": "^0.8.5",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "mongodb": "^2.2.25"
+    "mongodb": "^2.2.25",
+    "nodemon": "^1.11.0"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^3.1.2",
